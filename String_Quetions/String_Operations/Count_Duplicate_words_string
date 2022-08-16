@@ -1,0 +1,56 @@
+/*write a program of count duplicate string*/
+package MultithreadingLabQ;
+
+public class Count_Duplicates_words_string
+{
+	//count duplicate string method
+	public void duplicate_word()
+	{
+		//creating the string 
+		String string="big balck shirt big black pant bid black nose big black car";
+		int count;
+		
+		//convert string lower case
+		string=string.toLowerCase();
+		
+		//split the string
+		String words[]=string.split(" ");
+		
+		System.out.println("Duplicate words in given string:");
+		
+		//count duplicate worlds
+		for(int i=0;i<words.length;i++)
+		{
+			count=1;
+			
+			//compare i from j 
+			for(int j=i+1;j<words.length;j++)
+			{
+				//if world is equal to than add in count
+				if(words[i].equals(words[j]))
+				{
+					count++;
+					words[j]="0";
+				}
+			}
+			//if condition is true print words i
+			if(count>1 && words[i]!="0")
+			{
+				System.out.println(words[i]);
+			}
+			
+		}
+		
+	}
+	public static void main(String[]args)
+	{
+		//areating object of the class
+		Count_Duplicates_words_string obj=new Count_Duplicates_words_string();
+		
+		//invoke duplicate method by using object
+		obj.duplicate_word();
+		
+	}
+	
+
+}
