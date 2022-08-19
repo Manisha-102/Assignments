@@ -1,0 +1,35 @@
+/*Write a program to swap two strings without using third variable*/
+package MultithreadingLabQ;
+
+public class Swap_String {
+	String str1,str2;
+	
+	public void swap_str()
+	{
+		str1="Good";
+		str2="Morinng";
+		
+		System.out.println("String before swapping:"+str1+" "+str2);
+		
+		//concat both the string
+		str1=str1+str2;
+		
+		//extract string str1 to str2
+		str2=str1.substring(0,(str1.length()-(str2.length())));
+		
+		//extract str1 from update str1
+		str1=str1.substring(str2.length());
+		
+		System.out.println("String after swapping:"+str1+" "+str2);
+		
+	}
+	public static void main(String[]args)
+	{
+		//creating the object
+		Swap_String obj=new Swap_String();
+		
+		//calling the method by using object
+		obj.swap_str();
+	}
+
+}
