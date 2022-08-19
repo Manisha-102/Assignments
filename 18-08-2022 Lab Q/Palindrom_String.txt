@@ -1,0 +1,45 @@
+/*Write a program to accept string from the user and check it is palindrome or not without using function of string builder and string buffer*/
+package MultithreadingLabQ;
+import java.util.*;
+
+public class Palindrom_String 
+{
+	   //ckeck palindrom or not method
+	   public void palindrom_or_not()
+	   {
+	      String str, rev = "";
+	      Scanner sc = new Scanner(System.in);
+	 
+	      //taking input from user
+	      System.out.println("Enter a string:");
+	      str = sc.nextLine();
+	 
+	      int length = str.length();
+	      
+	      //reverse string by using for loop
+	      for ( int i = length - 1; i >= 0; i-- )
+	      {
+	         rev = rev + str.charAt(i);
+	      }
+	      
+	      //If string after reverse is same then it is palindrome otherwise not
+	      if (str.equals(rev))
+	      {
+	         System.out.println(str+" is a palindrome");
+	      }
+	      else
+	      {
+	         System.out.println(str+" is not a palindrome");
+	      }
+	 
+	   }
+	   public static void main(String[]args)
+	   {
+		   //creating class object
+		   Palindrom_String obj=new Palindrom_String();
+		   
+		   //calling method trough object
+		   obj.palindrom_or_not();
+	   }
+}
+
