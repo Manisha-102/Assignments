@@ -1,0 +1,39 @@
+/*Write a program to reverse each word of the string*/
+package MultithreadingLabQ;
+import java.util.Scanner;
+
+public class revese_String 
+{
+	//create variable
+	String str,rev="";
+	
+	//reverse method of string
+	public void reverse()
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		//taking input from user
+		System.out.println("Enter your string");
+		str=sc.nextLine();
+		
+		int length = str.length();
+		
+		//reverse string by using for loop
+		for ( int i = length - 1; i >= 0; i-- )
+	      {
+	    	  rev = rev + str.charAt(i);
+	      }
+	      System.out.println("Reverse string is:"+rev);
+	}
+
+	public static void main(String[]args)
+	{
+		//creating object of the class
+		revese_String obj=new revese_String();
+		
+		//call method by using object
+		obj.reverse();
+	}
+	
+
+}
