@@ -1,0 +1,34 @@
+/*write a program proove that string is immutable*/
+package MultithreadingLabQ;
+
+public class Proove_Immutable_strr {
+	//method ofrefrence check 
+	public static void refrence_check(Object x,Object y)
+	{
+		//if x is equal to y means both are pointing same refrence
+		//otherwise both are pointing diffrent refrence
+		if(x==y)
+		{
+			System.out.println("Both are pointing the same refrence");
+		}
+		else
+		{
+			System.out.println("Both are pointing the diffrent refrence");
+		}
+	}
+	public static void main(String[]args) 
+	{
+		//creating string
+		String m1="Hello";
+		String m2="Hello";
+		
+		System.out.println("Before modification of m1:");
+		refrence_check(m1,m2);//print string before modification
+		
+		//modify m1 String
+		m1="Welcome";
+		System.out.println("After modification of m1:");
+		refrence_check(m1,m2);//print string after modification
+	}
+
+}
