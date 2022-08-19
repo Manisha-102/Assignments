@@ -1,0 +1,60 @@
+/*Write a program to check if two strings are created with same character*
+Write a program to accept two strings from the use and check if first contains second*/
+package MultithreadingLabQ;
+import java.util.Scanner;
+
+public class Check_first_contain_second_str
+{
+	//creating variables
+	String s1,s2;
+	boolean result;
+	Scanner sc=new Scanner(System.in);
+	
+	//accept input from user
+	public void accept()
+	{
+		System.out.println("Enter your s1 string:");
+		s1=sc.nextLine();
+		
+		System.out.println("Enter your second s2 string");
+		s2=sc.nextLine();
+	}
+	
+	//method check both string is equal or not
+	public void equal_or_not()
+	{
+		if(s1.equals(s2))
+		{
+			System.out.println("Both string are equal");
+		}
+		else
+		{
+			System.out.println("Both string are unequal");
+		}
+	}
+	
+	//method check first containes second or not
+	public void contaion_or_not()
+	{
+		
+		result=s1.contains(s2);
+		if(result)
+		{
+			System.out.println(s1+" is present in the string");
+		}
+		else
+		{
+			System.out.println(s1+" is not present in the string");
+		}
+		
+	}
+	public static void main(String[]args)
+	{
+		Chech_str_contain obj=new Chech_str_contain();
+		obj.accept();
+		obj.contaion_or_not();
+		obj.equal_or_not();
+		
+	}
+	
+}
